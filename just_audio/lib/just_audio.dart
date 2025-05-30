@@ -128,6 +128,10 @@ class AudioPlayer {
 
   final _playbackEventSubject =
       BehaviorSubject<PlaybackEvent>.seeded(PlaybackEvent(), sync: true);
+  BehaviorSubject<PlaybackEvent> get playbackEventSubject =>
+      _playbackEventSubject;
+  BehaviorSubject<PlayerEvent> get playerEventSubject =>
+      _playerEventSubject;
 
   // derived from playbackEventStream
   final _processingStateSubject =
